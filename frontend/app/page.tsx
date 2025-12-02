@@ -25,7 +25,7 @@ export default function ChatPage() {
     setMessages((prev) => [...prev, { sender: "user", text: msg }]);
 
     try {
-      const res = await fetch(`http::5000/chat?bot=${bot}`, {
+      const res = await fetch(`https://chats-6eu2.onrender.com/chat?bot=${bot}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: msg }),
